@@ -6,7 +6,9 @@ let memeImg = document.getElementById("img-meme");
 let updateMeme = (url,title,author) => {
     memeImg.src = url;
     memeTitle.innerHTML = title;
+    memeTitle.style.textAlign = "center";
     memeAuthor.innerHTML = `Meme by: ${author}`;
+    memeAuthor.style.textAlign = "center";
 }
 const memeGenerator = async () => {
     let myMeme = await fetch(`https://meme-api.com/gimme/wholesomememes`);
